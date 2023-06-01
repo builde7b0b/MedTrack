@@ -10,7 +10,7 @@ public class Pharmacy {
     @GeneratedValue
     @Column(name = "supplier_id")
     private Long pharmacy_id ;
-    @@Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
     @Column(name = "email")
     private String email;
