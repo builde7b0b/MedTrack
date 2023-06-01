@@ -1,13 +1,25 @@
 package com.api.MedTrackAPI.model;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "orders")
 public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "order_id")
     private Long order_id;
+    @Column(name = "medication_id", nullable = false)
     private Long medication_id;
+    @Column(name = "supplier_id")
     private Long supplier_id;
+    @Column(name = "qty")
     private Long qty;
+    @Column(name = "created_date")
     private LocalDate created_date;
+    @Column(name = "price")
     private Long price;
 
     public Order() {
