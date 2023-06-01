@@ -1,14 +1,22 @@
 package com.api.MedTrackAPI.model;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "medications")
 public class Medication {
-
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "medication_id")
     private Long medicationId;
+@Column(name = "name", nullable = false)
     private String name;
-
+@Column(name = "quantity")
     private int quantity;
 
+@Column(name = "expiration_date")
     private LocalDate expirationDate;
 
     public Medication() {
