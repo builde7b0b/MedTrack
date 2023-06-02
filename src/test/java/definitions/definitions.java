@@ -1,6 +1,7 @@
 package definitions;
 
 import com.api.MedTrackAPI.model.Medication;
+import com.api.MedTrackAPI.model.Pharmacy;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,6 +15,10 @@ public class definitions {
     @Given("I am a pharmacy manager")
     public void iAmAPharmacyManager() {
         // create Pharmacy object
+        Pharmacy pharmacy = new Pharmacy();
+        pharmacy.setName("My Pharmacy");
+        pharmacy.setRole("pharmacy_manager");
+
 
     }
 
