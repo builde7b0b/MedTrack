@@ -19,4 +19,14 @@ public class MedicationService {
         return medicationRepository.findById(medicationId)
                 .orElseThrow(() -> new ResourceNotFoundException("Medication not found with id: " + medicationId));
     }
+
+    public Medication updateMedication(Long medicationId, Medication updatedMedication) {
+        Medication existingMedication = medicationRepository.findById(medicationId)
+                .orElseThrow(() -> new ResourceNotFoundException("Medication not found with id: " + medicationId));
+                // update existing medication with new data
+        existingMedication.setName(updatedMedication.getName());
+        existingMedication.setQuantity(updatedMedication.getQuantity());
+        existingMedication.setExpirationDate(updatedMedication.getExpirationDate());
+        return medicationRepository.save(existingMedication);
+    }
 }
