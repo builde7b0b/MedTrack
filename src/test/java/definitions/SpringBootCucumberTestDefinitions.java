@@ -7,6 +7,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.spring.CucumberContextConfiguration;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
@@ -19,6 +21,8 @@ import java.time.LocalDate;
 public class SpringBootCucumberTestDefinitions {
 
     private static final String BASE_URL = "http://localhost:";
+
+
 
     @LocalServerPort
     String port;
@@ -37,7 +41,15 @@ public class SpringBootCucumberTestDefinitions {
     }
 
     @When("I send a POST request to {string}")
-    public void iSendAPOSTRequestTo(String arg0) {
+    public void iSendAPOSTRequestTo(String endpoint) {
+        // setup the request URL
+        String url = BASE_URL + port + endpoint;
+
+        // Send the POST request with the medication paylaod
+        response = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body(medication)
+                .post(url);
 
     }
 
