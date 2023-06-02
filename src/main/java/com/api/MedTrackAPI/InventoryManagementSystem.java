@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface InventoryManagementSystem {
 
-    List<Medication> getCurrentInventory();
+     List<Medication> getCurrentInventory();
     Medication detectLowStock();
     List<Medication> detectExpiringMedications();
 
