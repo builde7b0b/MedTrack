@@ -29,6 +29,7 @@ public class definitions {
 
     @When("I access the inventory management system")
     public void iAccessTheInventoryManagementSystem() {
+        Medication.accessSystem
 
     }
 
