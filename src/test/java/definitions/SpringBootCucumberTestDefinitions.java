@@ -10,6 +10,7 @@ import io.cucumber.spring.CucumberContextConfiguration;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.junit.Assert;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 
@@ -45,7 +46,7 @@ public class SpringBootCucumberTestDefinitions {
         // setup the request URL
         String url = BASE_URL + port + endpoint;
 
-        // Send the POST request with the medication paylaod
+        // Send the POST request with the medication payload
         response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(medication)
@@ -54,7 +55,9 @@ public class SpringBootCucumberTestDefinitions {
     }
 
     @Then("the response status code should be {int}")
-    public void theResponseStatusCodeShouldBe(int arg0) {
+    public void theResponseStatusCodeShouldBe(int statusCode) {
+        // assert the response status code
+        Assert.assertEquals(statusCode, response.getStatusCode());
     }
 
     @And("the response should contain the created medication detail")
