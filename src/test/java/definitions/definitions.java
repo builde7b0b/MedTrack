@@ -6,11 +6,13 @@ import com.api.MedTrackAPI.repository.PharmacyRepository;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDate;
 
 public class definitions {
     private Medication medication;
+    @Autowired
     private PharmacyRepository pharmacyRepository;
 
 
