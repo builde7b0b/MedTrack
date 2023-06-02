@@ -1,6 +1,7 @@
 package com.api.MedTrackAPI.controller;
 
 import com.api.MedTrackAPI.model.Medication;
+import com.api.MedTrackAPI.service.MedicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +13,7 @@ public class MedicationController {
     private MedicationService medicationService;
 
     @PostMapping
-    public Medication createMedication(){
+    public Medication createMedication(@RequestBody Medication medication){
         return medicationService.createMedication(medication);
     }
 
