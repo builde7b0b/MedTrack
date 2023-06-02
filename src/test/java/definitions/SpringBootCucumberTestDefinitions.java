@@ -2,7 +2,10 @@ package definitions;
 
 import com.api.MedTrackAPI.MedTrackApiApplication;
 import com.api.MedTrackAPI.model.Medication;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.cucumber.spring.CucumberContextConfiguration;
 import io.restassured.response.Response;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,5 +34,18 @@ public class SpringBootCucumberTestDefinitions {
         medication.setQuantity(100);
         medication.setExpirationDate(LocalDate.of(2023, 5, 31));
 
+    }
+
+    @When("I send a POST request to {string}")
+    public void iSendAPOSTRequestTo(String arg0) {
+
+    }
+
+    @Then("the response status code should be {int}")
+    public void theResponseStatusCodeShouldBe(int arg0) {
+    }
+
+    @And("the response should contain the created medication detail")
+    public void theResponseShouldContainTheCreatedMedicationDetail() {
     }
 }
