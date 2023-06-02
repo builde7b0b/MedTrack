@@ -2,6 +2,7 @@ package definitions;
 
 import com.api.MedTrackAPI.model.Medication;
 import com.api.MedTrackAPI.model.Pharmacy;
+import com.api.MedTrackAPI.repository.PharmacyRepository;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 
 public class definitions {
     private Medication medication;
+    private PharmacyRepository pharmacyRepository;
 
 
     @Given("I am a pharmacy manager")
@@ -18,6 +20,7 @@ public class definitions {
         Pharmacy pharmacy = new Pharmacy();
         pharmacy.setName("My Pharmacy");
         pharmacy.setRole("pharmacy_manager");
+        pharmacyRepository.save(pharmacy);
 
 
     }
