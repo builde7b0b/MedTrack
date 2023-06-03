@@ -30,4 +30,13 @@ public class SupplierService {
 
         return supplierRepository.save(existingSupplier);
     }
+
+    public void deleteSupplier(Long supplierId) {
+        // check if supplier exists before deleting
+        if (supplierRepository.existsById(supplierId)) {
+            supplierRepository.deleteById(supplierId);
+        } else {
+            throw new ResourceNotFoundException("Supplier not found with id: " + supplierId);
+        }
+    }
 }
