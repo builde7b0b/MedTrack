@@ -19,6 +19,19 @@ public class Pharmacy {
     @Column(name = "Contact_info")
     private String address;
 
+    @Column(name = "role")
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+
+
     public Pharmacy() {
     }
 
