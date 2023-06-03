@@ -29,7 +29,7 @@ public class MedicationController {
     }
 
     @DeleteMapping("/{medicationId}")
-    public void deletedMedication(@PathVariable  Long medicationId) {
+    public void deleteMedication(@PathVariable  Long medicationId) {
         medicationService.deleteMedication(medicationId);
     }
 

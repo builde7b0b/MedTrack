@@ -30,6 +30,12 @@ public class MedicationService {
         return medicationRepository.save(existingMedication);
     }
 
+    public void deleteMedication(Long medicationId){
+        Medication existingMedication = medicationRepository.findById(medicationId)
+                .orElseThrow(() -> new ResourceNotFoundException("Medication not found with id: " + medicationId));
+        medicationRepository.delete(existingMedication);
+    }
+
 
 
 }
