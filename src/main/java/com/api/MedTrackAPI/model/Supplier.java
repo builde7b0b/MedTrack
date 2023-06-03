@@ -17,6 +17,8 @@ public class Supplier {
     @Column(name = "contact_info")
     private String contactInfo;
 
+
+
     public Supplier() {
     }
 

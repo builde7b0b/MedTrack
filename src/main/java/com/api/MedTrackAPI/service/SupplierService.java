@@ -20,4 +20,14 @@ public class SupplierService {
         return supplierRepository.findById(supplierId)
                 .orElseThrow(() -> new ResourceNotFoundException("Supplier not found with it: " + supplierId));
     }
+
+    public Supplier updateSupplier(Long supplierId, Supplier updatedSupplier) {
+        Supplier existingSupplier = supplierRepository.findById(supplierId)
+                .orElseThrow(() -> new ResourceNotFoundException("Supplier not found with id: " + supplierId));
+
+        existingSupplier.setName(updatedSupplier.getName());
+        existingSupplier.setContactInfo(updatedSupplier.getContactInfo());
+
+        return supplierRepository.save(existingSupplier);
+    }
 }
