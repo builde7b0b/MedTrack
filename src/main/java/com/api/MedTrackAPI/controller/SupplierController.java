@@ -1,8 +1,11 @@
 package com.api.MedTrackAPI.controller;
 
 import com.api.MedTrackAPI.model.Supplier;
+import com.api.MedTrackAPI.service.SupplierService;
 import org.springframework.web.bind.annotation.*;
 
+@RestController
+@RequestMapping("/suppliers")
 public class SupplierController {
 
     private SupplierService supplierService;
@@ -23,6 +26,6 @@ public class SupplierController {
 
     @DeleteMapping("/{supplierId}")
     public void deleteSupplier(@PathVariable Long supplierId) {
-        supplierService.deleteSupplier(suppierId);
+        supplierService.deleteSupplier(supplierId);
     }
 }
