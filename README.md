@@ -7,6 +7,23 @@ It revolutionizes the way pharmacies handle their inventory, ensuring medication
 
 Elevate your pharmacy's inventory management capabilities with MedTrack and unlock the full potential of your operations.
 
+
+## Key Features
+1. Product Management: Allow pharmacists or administrators to add, update, and remove products from the inventory. Each product entry can include details like name, description, quantity, expiration date, and supplier information.
+
+
+2. Stock Tracking: Keep track of the quantity and availability of each product in real-time. The system can automatically update the stock levels when products are added or sold.
+
+
+3. Notifications and Alerts: Send notifications or alerts to administrators when stock levels are running low or when products are approaching their expiration dates. This helps in ensuring timely replenishment and minimizing waste.
+
+
+4. Reporting and Analytics: Generate reports and analytics to provide insights into inventory trends, popular products, and reordering patterns. This can assist in optimizing inventory management strategies and improving decision-making.
+
+
+5. Barcode Scanning: Integrate barcode scanning functionality to quickly add products to the inventory or update their quantities during stock management processes.
+
+
 ## MedTrack UI
 The MedTrack UI is the user interface component of the MedTrack Pharmacy Inventory Management system. It provides a visually appealing and intuitive interface for users to interact with the system's features and functionalities. With its user-friendly design, the MedTrack UI ensures a seamless and efficient user experience, empowering pharmacies to effectively manage their inventory and streamline their operations.
 
