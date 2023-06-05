@@ -2,11 +2,13 @@ package com.api.MedTrackAPI.controller;
 
 import com.api.MedTrackAPI.model.Medication;
 import com.api.MedTrackAPI.service.MedicationService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/medications")
+@Tag(name =  "Prescription API")
 public class MedicationController {
 
     @Autowired
