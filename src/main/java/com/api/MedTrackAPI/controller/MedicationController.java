@@ -2,6 +2,7 @@ package com.api.MedTrackAPI.controller;
 
 import com.api.MedTrackAPI.model.Medication;
 import com.api.MedTrackAPI.service.MedicationService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,17 +20,20 @@ public class MedicationController {
         return medicationService.createMedication(medication);
     }
 
+    @Operation(summary = "Get a single Medication")
     @GetMapping("/{medicationId}")
     public Medication getMedication(@PathVariable Long medicationId){
         return medicationService.getMedication(medicationId);
 
     }
 
+    @Operation(summary = "Update Medication")
     @PutMapping("/{medicationId}")
     public Medication updateMedication(@PathVariable Long medicationId, @RequestBody Medication medication) {
         return medicationService.updateMedication(medicationId, medication);
     }
 
+    @Operation(summary = "Delete a Medication")
     @DeleteMapping("/{medicationId}")
     public void deleteMedication(@PathVariable  Long medicationId) {
         medicationService.deleteMedication(medicationId);
