@@ -1,15 +1,10 @@
-package com.sei.smartrx.swagger;
+package com.api.MedTrackAPI.swagger;
 
-import io.swagger.v3.oas.annotations.security.SecurityScheme;
-import org.springdoc.core.SwaggerUiConfigProperties;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springdoc.core.GroupedOpenApi;
 import org.springdoc.core.SwaggerUiConfigParameters;
+import org.springdoc.core.SwaggerUiConfigProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springdoc.core.GroupedOpenApi;
 
 @Configuration
 public class OpenApiConfig {
@@ -19,7 +14,7 @@ public class OpenApiConfig {
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
                 .group("public")
-                .packagesToScan("com.api.MedTrackAPI.controller") // Replace with your package containing API controllers
+                .packagesToScan("com.sei.smartrx.controller") // Replace with your package containing API controllers
                 .build();
     }
 
@@ -28,5 +23,5 @@ public class OpenApiConfig {
         return new SwaggerUiConfigParameters(properties)
                 ; // Skip security annotations if needed
     }
-
 }
+

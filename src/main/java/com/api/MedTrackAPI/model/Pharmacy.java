@@ -1,6 +1,7 @@
 package com.api.MedTrackAPI.model;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 
 @Entity
