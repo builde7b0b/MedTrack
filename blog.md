@@ -30,3 +30,36 @@ We have set up the backend structure, defined the database schema, and implement
 
 ### Misc
 installed shellCheckin IntelliJ IDEA
+
+
+
+# Day 2
+## Day 2: Backend Development and Integration
+
+- Continue developing the backend APIs for inventory transactions, including creating, updating, and retrieving transaction data.
+- Implement integration with the database for seamless data storage and retrieval.
+- Test the backend APIs using appropriate testing frameworks to ensure their functionality and reliability.
+
+
+## DAY 2: Recap
+1. Cucumber Testing with RestAssured
+2. Database Errors with Server Connection - Solution: Switched to H2 DB
+3. writing features and step definitions based on user stories
+4. Defined API endpoints for CRUD operations on medications and suppliers.
+5. Implemented the MedicationService class to handle the business logic for medications, including creating, reading, updating, and deleting medication records.
+6. Implemented the SupplierService class to handle the business logic for suppliers, including creating, reading, updating, and deleting supplier records.
+7. These services interact with the respective repository classes (MedicationRepository and SupplierRepository) for data access and persistence.
+8. Tested all endpoints in post for medications, they are working.
+
+# Day 3:
+
+## Day 3: ToDo
+- Test all supplier endpoints.
+- Add Pharmacy Endpoints and InventoryManagementController CRUD
+- Connect front-end and backend - TEST CONNECTION
+- much of the front-end is done - DISPLAY DATA FROM BACKEND
+- API DOCS - Swagger UI
+- Docker
+- Hosting
+- Saas
+- Silver - GOLD
