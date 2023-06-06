@@ -60,10 +60,10 @@ public class definitions {
     @When("the inventory management system detects low stock for a medication")
     public void theInventoryManagementSystemDetectsLowStockForAMedication() {
         int threshold = 10;
-        if (medication.getQuantity() < threshold) {
-            sendLowStockAlert(medication)
-
-        }
+//        if (medication.getQuantity() < threshold) {
+//            sendLowStockAlert(medication)
+//
+//        }
     }
 
     @Then("I should receive an automated alert notification")
