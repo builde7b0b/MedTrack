@@ -4,3 +4,4 @@ Feature: Medications API
     When I send a POST request to "/medications"
     Then the response status code should be 201
     And the response should contain the created medication detail
+
