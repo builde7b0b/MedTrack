@@ -30,7 +30,7 @@ public class MedicationController {
     }
 
     @Operation(summary = "Get all Medications")
-    @GetMapping("/medications")
+    @GetMapping("/")
     public List<Medication> getAllMedications() {
         return medicationService.getAllMedications();
     }
