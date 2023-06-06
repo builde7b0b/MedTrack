@@ -14,7 +14,7 @@ public class OpenApiConfig {
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
                 .group("public")
-                .packagesToScan("com.sei.smartrx.controller") // Replace with your package containing API controllers
+                .packagesToScan("com.api.MedTrackAPI.controller") // Replace with your package containing API controllers
                 .build();
     }
 

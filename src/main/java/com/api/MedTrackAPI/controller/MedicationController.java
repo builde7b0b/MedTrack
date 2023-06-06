@@ -7,6 +7,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/medications")
 @Tag(name =  "Prescription API")
@@ -25,6 +27,12 @@ public class MedicationController {
     public Medication getMedication(@PathVariable Long medicationId){
         return medicationService.getMedication(medicationId);
 
+    }
+
+    @Operation(summary = "Get all Medications")
+    @GetMapping("/medications")
+    public List<Medication> getAllMedications() {
+        return medicationService.getAllMedications();
     }
 
     @Operation(summary = "Update Medication")
