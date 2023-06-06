@@ -3,6 +3,7 @@ package com.api.MedTrackAPI;
 import com.api.MedTrackAPI.model.Order;
 import com.api.MedTrackAPI.repository.OrderRepository;
 import com.api.MedTrackAPI.service.OrderService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -41,8 +42,10 @@ public class OrderServiceTest {
 
 
         // call the method under test
+        List<Order> reorderSuggestions = orderService.generateReorderSuggestions();
 
         // assert the result
+        Assertions.assertEquals(mockOrders, reorderSuggestions);
 
 
     }
