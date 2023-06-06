@@ -20,6 +20,9 @@ public class Medication {
 @Column(name = "expiration_date")
     private LocalDate expirationDate;
 
+    @ManyToOne
+    private Pharmacy pharmacy;
+
     public Medication() {
     }
 
