@@ -42,6 +42,13 @@ public class MedicationService {
         medicationRepository.delete(existingMedication);
     }
 
+    public void checkLowStockAndSendAlert(Medication medication, int threshold) {
+        if (medication.getQuantity() > threshold) {
+            alertService.sendLowStockAlert(medication);
+        }
+    }
+
+
 
 
 }
