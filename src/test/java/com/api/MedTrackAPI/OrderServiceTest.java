@@ -11,6 +11,8 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
+import static org.mockito.Mockito.when;
+
 //UNIT TESTING
 public class OrderServiceTest {
     @Mock
@@ -35,6 +37,7 @@ public class OrderServiceTest {
         List<Order> mockOrders = List.of(order1, order2);
 
         //mock behavior of orderRepository
+        when(orderRepository.findAll()).thenReturn(mockOrders);
 
 
         // call the method under test
