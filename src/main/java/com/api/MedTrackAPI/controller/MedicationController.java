@@ -47,9 +47,4 @@ public class MedicationController {
         medicationService.deleteMedication(medicationId);
     }
 
-
-
-
-
-
 }
