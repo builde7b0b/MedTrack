@@ -10,6 +10,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.mockito.Mockito.when;
@@ -45,7 +46,7 @@ public class OrderServiceTest {
         //create mock data to be returned by the mocked order Repo with find all
         Order order1 = new Order();
         Order order2 = new Order();
-        List<Order> mockOrders = List.of(order1, order2);
+        List<Order> mockOrders = Arrays.asList(order1, order2);
 
         //mock behavior of orderRepository
         when(orderRepository.findAll()).thenReturn(mockOrders);
