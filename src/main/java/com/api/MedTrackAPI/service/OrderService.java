@@ -23,29 +23,21 @@ public class OrderService {
     }
 
 
-    public List<Order>  generateReorderSuggestions(){
+    public List<Order> generateReorderSuggestions() {
         List<Order> reorderSuggestions = new ArrayList<>();
-        //implement the logic to calc stock levels, compare with thresholds,
         List<Medication> medications = medicationRepository.findAll();
+        int threshold = 5; // replace with whatever the threshold is
+
         for (Medication medication : medications) {
             int stockLevel = medication.getQuantity();
-            int threshold = 10; // replace with whatever the threshold is
+
             if (stockLevel < threshold) {
                 Order reorderOrder = createReorderOrder(medication);
                 reorderSuggestions.add(reorderOrder);
             }
         }
+
         return reorderSuggestions;
-        // and generate reorder suggestions
-        //return list of orders as reorder suggestions
-        // Calculate stock levels based on predefined thresholds
-        // Generate reorder suggestions
-
-
-        // Implement the logic to calculate stock levels, compare with thresholds, and generate reorder suggestions
-        // Return a list of orders as reorder suggestions
-
-
     }
 
     private Order createReorderOrder(Medication medication) {

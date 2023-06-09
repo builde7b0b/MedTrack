@@ -43,9 +43,9 @@ public class MedicationService {
     }
 
     public void checkLowStockAndSendAlert(Medication medication, int threshold) {
-        if (medication.getQuantity() > threshold) {
-            alertService.sendLowStockAlert(medication);
-        }
+//        if (medication.getQuantity() > threshold) {
+//            alertService.sendLowStockAlert(medication);
+//        }
     }
 
 

@@ -26,13 +26,11 @@ public class Medication {
     public Medication() {
     }
 
+
     public Long getMedication_Id() {
         return medication_Id;
     }
 
-    public void setMedication_Id(Long medication_Id) {
-        this.medication_Id = medication_Id;
-    }
 
 
     public String getName() {
