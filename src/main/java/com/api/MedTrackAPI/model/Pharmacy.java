@@ -2,6 +2,7 @@ package com.api.MedTrackAPI.model;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -22,6 +23,9 @@ public class Pharmacy {
 
     @Column(name = "role")
     private String role;
+
+    @OneToMany(mappedBy = "pharmacy", cascade = CascadeType.ALL)
+    private List<Medication> medicationInventory;
 
     public String getRole() {
         return role;
@@ -75,5 +79,13 @@ public class Pharmacy {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Medication> getMedicationInventory() {
+        return medicationInventory;
+    }
+
+    public void setMedicationInventory(List<Medication> medicationInventory) {
+        this.medicationInventory = medicationInventory;
     }
 }

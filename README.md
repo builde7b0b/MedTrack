@@ -77,3 +77,28 @@ As a pharmacy owner, I want to analyze historical sales data and inventory trend
 As a pharmacy technician, I want to have a user-friendly interface to easily update inventory records when new stock arrives, record returns or recalls, and manage stock transfers between different pharmacy locations.
 
 
+### User Breakdown:
+- Pharmacy Manager:
+  The pharmacy manager is responsible for overseeing the overall operations of the pharmacy. They are concerned with tracking inventory levels, making data-driven decisions, optimizing profitability, and ensuring customer satisfaction.
+
+
+- Pharmacist:
+  Pharmacists play a crucial role in dispensing medications and providing patient care. They require real-time inventory tracking, alerts for low stock and expiration dates, integration with the point-of-sale system, and analytics to make informed decisions about inventory management.
+
+
+- Pharmacy Staff Member:
+  The staff members working in the pharmacy, such as pharmacy technicians, are involved in day-to-day tasks related to inventory management. They need user-friendly interfaces to update inventory records, handle stock transfers, manage returns or recalls, and efficiently locate medications within the pharmacy.
+
+
+- Pharmacy Purchaser:
+  The purchaser is responsible for managing the procurement process, including ordering medications from suppliers and ensuring smooth communication and documentation. They require streamlined electronic ordering, order confirmations, and automated invoice reconciliation.
+
+
+- Pharmacy Owner:
+  The pharmacy owner is concerned with the overall profitability and strategic decision-making. They require analytics and insights into historical sales data, inventory trends, and carrying costs to optimize inventory levels and improve profitability.
+
+Each user has specific needs and priorities based on their role within the pharmacy.
+The pharmacy manager and pharmacist focus on operational efficiency, patient care, and stock availability.
+The staff members require user-friendly interfaces and efficient workflows.
+The purchaser emphasizes streamlined procurement processes, while the owner is interested in strategic insights and profitability.
+

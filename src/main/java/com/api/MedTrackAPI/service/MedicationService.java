@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MedicationService {
     @Autowired
@@ -18,6 +20,10 @@ public class MedicationService {
     public Medication getMedication(Long medicationId) {
         return medicationRepository.findById(medicationId)
                 .orElseThrow(() -> new ResourceNotFoundException("Medication not found with id: " + medicationId));
+    }
+
+    public List<Medication> getAllMedications() {
+        return medicationRepository.findAll();
     }
 
     public Medication updateMedication(Long medicationId, Medication updatedMedication) {
@@ -35,6 +41,13 @@ public class MedicationService {
                 .orElseThrow(() -> new ResourceNotFoundException("Medication not found with id: " + medicationId));
         medicationRepository.delete(existingMedication);
     }
+
+    public void checkLowStockAndSendAlert(Medication medication, int threshold) {
+//        if (medication.getQuantity() > threshold) {
+//            alertService.sendLowStockAlert(medication);
+//        }
+    }
+
 
 
 
